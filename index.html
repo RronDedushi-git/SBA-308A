@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="container">
+      <h1>Movie Explorer</h1>
+      <p class="sub">Search for any movie or TV show</p>
+
+      <div class="controls">
+        <input id="searchInput" placeholder="Type a movie name..." />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="resultsSection" style="display: none">
+        <h2>Search Results</h2>
+        <div id="results" class="grid"></div>
+        <nav id="pagination" class="pager"></nav>
+      </section>
+    </main>
+
+    <dialog id="movieDialog">
+      <article id="movieContent"></article>
+      <form method="dialog"><button>Close</button></form>
+    </dialog>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
