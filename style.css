@@ -61,7 +61,6 @@ h2 {
   font-size: 1.1rem;
   margin-bottom: 2rem;
 }
-
 .muted {
   color: var(--muted);
 }
@@ -112,8 +111,8 @@ h2 {
   box-shadow: 0 4px 16px rgba(183, 166, 171, 0.4);
 }
 .controls button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(156, 142, 147, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(156, 142, 147, 0.6);
 }
 .controls button:active {
   transform: translateY(0);
@@ -133,7 +132,7 @@ section {
 .card {
   border: 1px solid var(--border);
   background: var(--card);
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,7 +153,7 @@ section {
 }
 .card:hover {
   transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
   border-color: var(--accent);
 }
 .card:hover::before {
@@ -305,7 +304,7 @@ dialog button {
 dialog button:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(156, 142, 147, 0.5);
+  box-shadow: 0 8px 18px rgba(156, 142, 147, 0.55);
 }
 
 @media (max-width: 768px) {
