@@ -3,31 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Movie Explorer</title>
+    <title>FILMOTECA</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header class="container">
-      <h1>Movie Explorer</h1>
-      <p class="sub">Search for any movie or TV show</p>
+      <h1>FILMOTECA</h1>
+      <p class="sub">Search your favorite movies & TV shows</p>
 
-      <div class="controls">
-        <input id="searchInput" placeholder="Type a movie name..." />
-        <button id="searchBtn">Search</button>
+      <div class="controls" role="search">
+        <input
+          id="searchInput"
+          placeholder="Type a movie name..."
+          aria-label="Search movies"
+          autocomplete="off"
+        />
+        <button id="searchBtn" aria-label="Search">Search</button>
       </div>
     </header>
 
     <main class="container">
-      <section id="resultsSection" style="display: none">
+      <section id="resultsSection" style="display: none" aria-live="polite">
         <h2>Search Results</h2>
         <div id="results" class="grid"></div>
-        <nav id="pagination" class="pager"></nav>
+        <nav id="pagination" class="pager" aria-label="Pagination"></nav>
       </section>
     </main>
 
-    <dialog id="movieDialog">
+    <dialog id="movieDialog" aria-label="Movie details">
       <article id="movieContent"></article>
-      <form method="dialog"><button>Close</button></form>
+      <form method="dialog">
+        <button aria-label="Close details">Close</button>
+      </form>
     </dialog>
 
     <script type="module" src="./src/main.js"></script>
