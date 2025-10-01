@@ -1,4 +1,4 @@
-# Filmoteca
+# FILMOTECA
 
 Filmoteca is a small web app that lets you search movies and TV shows using the OMDb API.  
 You can type a title, browse results with pagination, and click a card to see full details like year, genre, and plot.
