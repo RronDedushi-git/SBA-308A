@@ -91,3 +91,31 @@ export function renderPagination(currentPage, totalResults, onPageClick) {
     });
   });
 }
+export function showMovieModal(movie) {
+  const dialog = document.getElementById("movieDialog");
+  const content = document.getElementById("movieContent");
+
+  const poster =
+    movie.Poster !== "N/A"
+      ? movie.Poster
+      : "https://via.placeholder.com/300x450?text=No+Poster";
+
+  content.innerHTML = `
+    <div class="movie-hero">
+      <img src="${poster}" alt="${movie.Title}" />
+      <div>
+        <h2>${movie.Title}</h2>
+        <div class="movie-meta"><strong>Year:</strong> ${movie.Year}</div>
+        <div class="movie-meta"><strong>Rated:</strong> ${movie.Rated}</div>
+        <div class="movie-meta"><strong>Runtime:</strong> ${movie.Runtime}</div>
+        <div class="movie-meta"><strong>Genre:</strong> ${movie.Genre}</div>
+        <div class="movie-meta"><strong>Director:</strong> ${movie.Director}</div>
+        <div class="movie-meta"><strong>Actors:</strong> ${movie.Actors}</div>
+        <div class="movie-meta"><strong>IMDb Rating:</strong> ${movie.imdbRating}/10</div>
+        <p class="movie-plot">${movie.Plot}</p>
+      </div>
+    </div>
+  `;
+
+  dialog.showModal();
+}
